@@ -4,6 +4,7 @@ var name = document.getElementById("name").value;
 
 var splitByName = name.split('\n');
 var listOfNames = "";
+var paraOfNames = "";
 console.log(splitByName.length);
 
 for( x = 0; x <= splitByName.length; x++){
@@ -29,6 +30,7 @@ console.log(splitIntoLetters);
 		console.log(first_initial + " " + lastname);
 		document.getElementById("nameShort").innerHTML = first_initial + ". " + lastname;
 		listOfNames += first_initial + ". " + lastname + "<br>";
+		paraOfNames += first_initial + ". " + lastname + ", ";
 
 	}
 	else{
@@ -37,7 +39,7 @@ console.log(splitIntoLetters);
 	}
 	console.log(x);
 	console.log(listOfNames);
-	document.getElementById("nameShort").innerHTML = listOfNames;
+	document.getElementById("nameShort").innerHTML = listOfNames + "<br>" + paraOfNames;
 
 }
 
