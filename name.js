@@ -13,7 +13,7 @@ var splitEntireName = splitByName[x].split(' '); // Split in by spaces "Ali, Mal
 var splitIntoLetters = splitByName[x].split(''); // Split by chars "A,l,i,M,a,l,i,k"
 console.log(splitIntoLetters);
 
-	if(splitByName[x].length == 1){
+	if(splitEntireName.length == 1){
 		console.log("I need a full name (first and last");
 		alert("I need a full name (first and last) " + splitByName[x] + " is not a full name");
 	}
