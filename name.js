@@ -1,56 +1,49 @@
-// JS
 
-var name = "Paul Steve Panakkal" // try "Paul", "Paul Steve"
-var first_name = name.split(' ')[0]
-
-var fn = first_name.charAt(0)
-var last_name = name.substring(first_name.length).trim()
-console.log(first_name)
-console.log(last_name)
-console.log(fn)
-
-////
-
-
-
-
-
-function NameSplit(){
+function NameSplit() {
 var name = document.getElementById("name").value;
-//var name = "Paul Steve Panakkal"; // need to take mass input
-// var splitByname[] = name.split('\n')
-var split = name.split(' ');
-//var splitname = split.split(' ');
-console.log(split);
-console.log(split[1]);
-console.log(split.length);
 
-var listOfNames = null;
+var splitByName = name.split('\n');
+var listOfNames = "";
+console.log(splitByName.length);
 
-if(split.length == 1){
-	console.log("I need a full name (first and last");
-	document.getElementById("nameShort").innerHTML = "I need a full name (first and last)";
+for( x = 0; x <= splitByName.length; x++){
+
+var currentName = splitByName[x]; // Full name "Ali Malik"
+var splitEntireName = splitByName[x].split(' '); // Split in by spaces "Ali, Malik"
+var splitIntoLetters = splitByName[x].split(''); // Split by chars "A,l,i,M,a,l,i,k"
+console.log(splitIntoLetters);
+
+	if(splitByName[x].length == 1){
+		console.log("I need a full name (first and last");
+		alert("I need a full name (first and last) " + splitByName[x] + " is not a full name");
+	}
+
+	else if(splitByName[x].length >= 2){
+		console.log("You're lucky I added middle name support");
+
+		//var firstname = splitEntireName.charAt(0);
+		var lastname = splitEntireName[splitEntireName.length-1];
+		console.log(lastname + " is the last name");
+		var first_initial = splitIntoLetters[0];
+
+		console.log(first_initial + " " + lastname);
+		document.getElementById("nameShort").innerHTML = first_initial + ". " + lastname;
+		listOfNames += first_initial + ". " + lastname + "<br>";
+
+	}
+	else{
+		console.log("tfw the dev dum");
+		document.getElementById("nameShort").innerHTML = "Ask Ms.Albano to send me an email <br> this is an error - you found an error in my code. In the email, please add in what you put into the box.";
+	}
+	console.log(x);
+	console.log(listOfNames);
+	document.getElementById("nameShort").innerHTML = listOfNames;
+
 }
 
-else if(split.length >= 2){
-	console.log("You're lucky I added middle name support");
-
-	var firstname = name.split(' ')[0];
-	var lastname = name.split(' ')[split.length-1];
-	var first_initial = firstname.charAt(0);
-
-	console.log(first_initial + " " + lastname);
-	document.getElementById("nameShort").innerHTML = first_initial + ". " + lastname;
-	listOfNames += first_initial + ". " + lastname + \n;
-
-}
-else{
-	console.log("tfw the dev dum");
-	document.getElementById("nameShort").innerHTML = "Ask Ms.Albano to send me an email <br> this is an error - you found an error in my code. In the email, please add in what you put into the box.";
 }
 
 
-}
 
 
 
