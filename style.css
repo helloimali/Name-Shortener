@@ -1,0 +1,20 @@
+body{
+	background-color: #e74c3c;
+}
+
+p,h1,h2{
+	color:white;
+}
+
+footer{
+	color: white;
+}
+
+a{
+	color: #34495e;
+}
+
+.buttonAndText{
+	
+	text-align:center;
+}

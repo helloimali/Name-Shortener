@@ -4,35 +4,37 @@
     <meta charset="UTF-8">
     <title>Name Shortener</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
   </head>
     
-  <body>
+  <body class="container">
     <section class="page-header">
       <h1 class="project-name">Name Shortener</h1>
       <h2 class="project-tagline">Created for the Northern Highlands Yearbook team so they can stop wasting time.</h2>
         
 
-        
-        
-      <button class="btn" onclick="NameSplit()">Click to calculate</button>
+        <br>
+
+  <div class="buttonAndText"> 
+
       
 
-<textarea type="text" id= "name" name="FirstName" value="FirstName LastName">
+<textarea type="text" id= "name" name="FirstName">
 
 </textarea>
-
-
+  
+      <br>
+      <button class="btn" onclick="NameSplitFirst()">Firstname Lastname</button>
+      <button class="btn" onclick="NameSplitLast()">Lastname Firstname</button>
         <p id="final"></p>
+        <p id="nameShort"></p>
+        
+        </div>
     </section>
 
-    <section class="main-content">
-      
 
-<p id="nameShort"></p>
-
-
-
+  <section class="main-content">
 <center>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/helloimali/Name-Shortener">Name Shortener</a> is maintained by <a href="https://github.com/helloimali">helloimali</a>.</span>
@@ -41,12 +43,6 @@
     </section>
 
   
-      
-      <script type="text/javascript" src="name.js"></script>
-
-            
-      
-      
-      
-  </body>
+      <script type="text/javascript" src="name.js"></script>         
+    </body>
 </html>
